@@ -1,2 +1,32 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
+
+.main-container {
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 120px;
+    img { width: 100%; object-fit: cover; }
+}
+.config-detail-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.config-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    & .config-control-container {
+        width: 320px;
+        height: fit-content;
+        max-height: 420px;
+        overflow-y: auto;
+    }
+}
