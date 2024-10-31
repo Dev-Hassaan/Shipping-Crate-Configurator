@@ -1,11 +1,24 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 
+body {
+    overflow: hidden;
+    color: #0c7103;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.playcanvas-container {
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .main-container {
@@ -21,7 +34,7 @@ input::-webkit-inner-spin-button {
 }
 .config-detail-container {
     position: absolute;
-    top: 60vh;
+    bottom: 180px;
     left: 10px;
     & .button-container {
         display: flex;
@@ -36,6 +49,24 @@ input::-webkit-inner-spin-button {
             align-content: center;
             justify-content: center;
             align-items: center;
+        }
+    }
+    & .details-container {
+        width: 195px;
+        height: 270px;
+        & .header {
+            text-align: center;   
+        }
+        & .details-row {
+            display: flex;
+
+            & .details-item {
+                text-align: center;
+                width: 100%;
+            }
+            & .details-item:nth-child(1) {
+                text-align: left;
+            }
         }
     }
 }
@@ -127,6 +158,7 @@ input::-webkit-inner-spin-button {
     box-shadow: 3px 3px 9px 1px #999999;
 }
 
-.btn-primary {
-    /* --bs-btn-bg:#0b66af; */
+.bg-primary {
+    background-color: #dddedf !important;
 }
+

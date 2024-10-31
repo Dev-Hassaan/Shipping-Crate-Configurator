@@ -8,19 +8,54 @@
   </head>
   <body>
     <div class="main-container">
-      <!-- Iframe -->
+      <!-- Playcanvas -->
+       <div class="playcanvas-container">
+         <iframe id="app" src="https://playcanv.as/e/b/49d64106" frameborder="0"></iframe>
+       </div>
       <!-- UI Elements -->
        <div class="logo">
           <img src="/Logo/Logo.png" alt="Logo">
        </div>
        <div class="config-detail-container">
           <div class="button-container">
-              <button class="btn btn-primary">Exploded View: Off</button>
-              <button class="btn btn-primary">Hide Crate: Off</button>
+              <button id="exploded" class="btn btn-primary">Exploded View: Off</button>
+              <button id="hideCrate" class="btn btn-primary">Hide Crate: Off</button>
           </div>
-          <div class="details-container bg-primary">
-              <!-- Rabia Work Div -->
-
+          <div class="details-container bg-primary p-3 rounded-4">
+            <div class="crate-details mb-3">
+                <div class="header">Crate Dimensions</div>
+                <div class="details-row">
+                  <div class="details-item"></div>
+                  <div class="details-item text-decoration-underline ">OD</div>
+                  <div class="details-item text-decoration-underline ">ID</div>
+                </div>
+                <div class="details-row">
+                  <div class="details-item text-decoration-underline">Length</div>
+                  <div class="details-item">0</div>
+                  <div class="details-item">0</div>
+                </div>
+                <div class="details-row">
+                  <div class="details-item text-decoration-underline">Width</div>
+                  <div class="details-item">0</div>
+                  <div class="details-item">0</div>
+                </div>
+                <div class="details-row">
+                  <div class="details-item text-decoration-underline">Height</div>
+                  <div class="details-item">0</div>
+                  <div class="details-item">0</div>
+                </div>
+            </div>
+            <div class="crate-details">
+              <div class="header">Crate Into</div>
+              <div class="details-row">
+                <div class="details-item text-decoration-underline">Weight</div>
+                <div class="details-item">0</div>
+              </div>
+              <div class="details-row">
+                <div class="details-item text-decoration-underline">Pallet Type</div>
+                <div class="details-item">0</div>
+              </div>
+          </div>
           </div>
        </div>
        <div class="config-container">
@@ -110,25 +145,25 @@
                         <div class="config-editor">
                           <div class="editor-item mb-3">
                             <label for="editor-a-1" class="form-label"># of Top Boards</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-a-1" class="bi bi-dash-circle"></i>
-                              <input type="number" value="7" id="editor-a-1" class="form-control">
+                              <input type="number" value="7" id="editor-a-1" class="editor-counter form-control">
                               <i id="plus-a-1" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
                           <div class="editor-item mb-3">
                             <label for="editor-a-2" class="form-label"># of Stringers</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-a-2" class="bi bi-dash-circle"></i>
-                              <input type="number" value="3" id="editor-a-2" class="form-control">
+                              <input type="number" value="3" id="editor-a-2" class="editor-counter form-control">
                               <i id="plus-a-2" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
                           <div class="editor-item mb-3">
                             <label for="editor-a-3" class="form-label"># of Bot Boards</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-a-3" class="bi bi-dash-circle"></i>
-                              <input type="number" value="4" id="editor-a-3" class="form-control">
+                              <input type="number" value="4" id="editor-a-3" class="editor-counter form-control">
                               <i id="plus-a-3" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
@@ -194,8 +229,8 @@
                     <div id="p_o_1" class="accordion-collapse collapse show" data-bs-parent="#pallet-only-accordion">
                       <div class="accordion-body">
                         <div class="config-size">
-                          <div class="size-item"><label for="size-b-1" class="form-label">External Length (inches)</label><input type="number" value="48" id="size-b-1" class="form-control"></div>
-                          <div class="size-item"><label for="size-b-2" class="form-label">External Width (inches)</label><input type="number" value="48" id="size-b-2" class="form-control"></div>
+                          <div class="size-item"><label for="size-b-1" class="form-label">External Length (inches)</label><input type="number" value="48" id="size-b-1" class="size-event form-control"></div>
+                          <div class="size-item"><label for="size-b-2" class="form-label">External Width (inches)</label><input type="number" value="48" id="size-b-2" class="size-event form-control"></div>
                         </div>
                       </div>
                     </div>
@@ -209,37 +244,37 @@
                     <div id="p_o_2" class="accordion-collapse collapse" data-bs-parent="#pallet-only-accordion">
                       <div class="accordion-body">
                         <div class="config-pallet">
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:blockPallet">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:blockPallet">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_1.png" alt="Pallet 1">
                             </div>
                             <div class="pallet-btn btn btn-primary">Block Pallet</div>
                           </div>
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:customPallet">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:customPallet">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_2.png" alt="Pallet 2">
                             </div>
                             <div class="pallet-btn btn btn-primary">Custom Pallet</div>
                           </div>
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:ecoPalletR">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:ecoPalletR">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_3.png" alt="Pallet 3">
                             </div>
                             <div class="pallet-btn btn btn-primary">Eco PalletR</div>
                           </div>
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:hdPallet">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:hdPallet">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_4.png" alt="Pallet 4">
                             </div>
                             <div class="pallet-btn btn btn-primary">HD Pallet</div>
                           </div>
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:hdLitePallet">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:hdLitePallet">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_5.png" alt="Pallet 5">
                             </div>
                             <div class="pallet-btn btn btn-primary">HD Lite Pallet</div>
                           </div>
-                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:sledPallet">
+                          <div class="pallet-item pallet-event-b gap-3 mb-3" id="pallet-b:sledPallet">
                             <div class="pallet-image">
                               <img class="img-fluid " src="/Pallet/pallet_6.png" alt="Pallet 6">
                             </div>
@@ -260,25 +295,25 @@
                         <div class="config-editor">
                           <div class="editor-item mb-3">
                             <label for="editor-b-1" class="form-label"># of Top Boards</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-b-1" class="bi bi-dash-circle"></i>
-                              <input type="number" value="7" id="editor-b-1" class="form-control">
+                              <input type="number" value="7" id="editor-b-1" class="editor-counter form-control">
                               <i id="plus-b-1" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
                           <div class="editor-item mb-3">
                             <label for="editor-b-2" class="form-label"># of Stringers</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-b-2" class="bi bi-dash-circle"></i>
-                              <input type="number" value="3" id="editor-b-2" class="form-control">
+                              <input type="number" value="3" id="editor-b-2" class="editor-counter form-control">
                               <i id="plus-b-2" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
                           <div class="editor-item mb-3">
                             <label for="editor-b-3" class="form-label"># of Bot Boards</label>
-                            <div class="editor-control">
+                            <div class="editor-control gap-3">
                               <i id="minus-b-3" class="bi bi-dash-circle"></i>
-                              <input type="number" value="4" id="editor-b-3" class="form-control">
+                              <input type="number" value="4" id="editor-b-3" class="editor-counter form-control">
                               <i id="plus-b-3" class="bi bi-plus-circle"></i>
                             </div>
                           </div>
