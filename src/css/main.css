@@ -14,8 +14,23 @@
 }
 .config-detail-container {
     position: absolute;
-    bottom: 10px;
+    top: 60vh;
     left: 10px;
+    & .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 120px;
+        button {
+            width: 180px;
+            height: 30px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 .config-container {
     position: absolute;
@@ -29,4 +44,15 @@
         max-height: 420px;
         overflow-y: auto;
     }
+}
+
+.btn {
+    --bs-btn-border-radius: 120px ;
+    --bs-btn-font-weight: bold;
+    /* box-shadow: 4px 4px 8px #0b66af; */
+    box-shadow: 3px 3px 9px 1px #999999;
+}
+
+.btn-primary {
+    /* --bs-btn-bg:#0b66af; */
 }
