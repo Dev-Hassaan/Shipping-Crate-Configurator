@@ -5,7 +5,7 @@ export default function StateHandler(element, event) {
     $(element).on(event, function() {
         $(element).removeClass("active")
         $(this).addClass("active")
-        SnedPostMessage(app, $(this).attr("id"))
+        app == null ? 0 : SnedPostMessage(app, $(this).attr("id"))
     })
 }
 

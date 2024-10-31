@@ -33,19 +33,19 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-create-pallet" role="tabpanel" aria-labelledby="nav-create-pallet-tab" tabindex="0">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="create-pallet-accordion">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c_p_1" aria-expanded="true" aria-controls="c_p_1">
                         Size
                       </button>
                     </h2>
-                    <div id="c_p_1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div id="c_p_1" class="accordion-collapse collapse show" data-bs-parent="#create-pallet-accordion">
                       <div class="accordion-body">
                           <div class="config-size">
-                            <div class="size-item"><label for="size-a-1" class="form-label">External Length (inches)</label><input type="number" value="48" id="size-a-1" class="form-control"></div>
-                            <div class="size-item"><label for="size-a-2" class="form-label">External Width (inches)</label><input type="number" value="48" id="size-a-2" class="form-control"></div>
-                            <div class="size-item"><label for="size-a-3" class="form-label">External Height (inches)</label><input type="number" value="48" id="size-a-3" class="form-control"></div>
+                            <div class="size-item"><label for="size-a-1" class="form-label">External Length (inches)</label><input type="number" value="48" id="size-a-1" class="size-event form-control"></div>
+                            <div class="size-item"><label for="size-a-2" class="form-label">External Width (inches)</label><input type="number" value="48" id="size-a-2" class="size-event form-control"></div>
+                            <div class="size-item"><label for="size-a-3" class="form-label">External Height (inches)</label><input type="number" value="48" id="size-a-3" class="size-event form-control"></div>
                           </div>
                       </div>
                     </div>
@@ -56,9 +56,46 @@
                         Pallet
                       </button>
                     </h2>
-                    <div id="c_p_2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="c_p_2" class="accordion-collapse collapse" data-bs-parent="#create-pallet-accordion">
                       <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="config-pallet">
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:blockPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_1.png" alt="Pallet 1">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Block Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:customPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_2.png" alt="Pallet 2">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Custom Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:ecoPalletR">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_3.png" alt="Pallet 3">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Eco PalletR</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:hdPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_4.png" alt="Pallet 4">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">HD Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:hdLitePallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_5.png" alt="Pallet 5">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">HD Lite Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-a:sledPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_6.png" alt="Pallet 6">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Sled Pallet</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -68,9 +105,46 @@
                         Pallet Editor
                       </button>
                     </h2>
-                    <div id="c_p_3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="c_p_3" class="accordion-collapse collapse" data-bs-parent="#create-pallet-accordion">
                       <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="config-editor">
+                          <div class="editor-item mb-3">
+                            <label for="editor-a-1" class="form-label"># of Top Boards</label>
+                            <div class="editor-control">
+                              <i id="minus-a-1" class="bi bi-dash-circle"></i>
+                              <input type="number" value="7" id="editor-a-1" class="form-control">
+                              <i id="plus-a-1" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="editor-item mb-3">
+                            <label for="editor-a-2" class="form-label"># of Stringers</label>
+                            <div class="editor-control">
+                              <i id="minus-a-2" class="bi bi-dash-circle"></i>
+                              <input type="number" value="3" id="editor-a-2" class="form-control">
+                              <i id="plus-a-2" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="editor-item mb-3">
+                            <label for="editor-a-3" class="form-label"># of Bot Boards</label>
+                            <div class="editor-control">
+                              <i id="minus-a-3" class="bi bi-dash-circle"></i>
+                              <input type="number" value="4" id="editor-a-3" class="form-control">
+                              <i id="plus-a-3" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="extra_button-a">
+                            <label class="form-check-label" for="extra_button-a">
+                              Extra Bottom lx6
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="rotate_entity-a">
+                            <label class="form-check-label" for="rotate_entity-a">
+                              Rotate Entry
+                            </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -80,23 +154,44 @@
                         Custom Logos
                       </button>
                     </h2>
-                    <div id="c_p_4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="c_p_4" class="accordion-collapse collapse" data-bs-parent="#create-pallet-accordion">
                       <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="config-custom-logo">
+                          <div class="logo-item mb-3">
+                            <label for="frontLogo-a" class="form-label btn btn-primary">Front Logo</label>
+                            <input class="form-control d-none" type="file" id="frontLogo-a">
+                          </div>
+                          <div class="logo-item mb-3">
+                            <label for="backLogo-a" class="form-label btn btn-primary">Back Logo</label>
+                            <input class="form-control d-none" type="file" id="backLogo-a">
+                          </div>
+                          <div class="logo-item mb-3">
+                            <label for="leftLogo-a" class="form-label btn btn-primary">Left Logo</label>
+                            <input class="form-control d-none" type="file" id="leftLogo-a">
+                          </div>
+                          <div class="logo-item mb-3">
+                            <label for="rightLogo-a" class="form-label btn btn-primary">Right Logo</label>
+                            <input class="form-control d-none" type="file" id="rightLogo-a">
+                          </div>
+                          <div class="logo-item mb-3">
+                            <label for="topLogo-a" class="form-label btn btn-primary">Top Logo</label>
+                            <input class="form-control d-none" type="file" id="topLogo-a">
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="nav-pallet-only" role="tabpanel" aria-labelledby="nav-pallet-only-tab" tabindex="0">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="pallet-only-accordion">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p_o_1" aria-expanded="true" aria-controls="p_o_1">
                         Size
                       </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div id="p_o_1" class="accordion-collapse collapse show" data-bs-parent="#pallet-only-accordion">
                       <div class="accordion-body">
                         <div class="config-size">
                           <div class="size-item"><label for="size-b-1" class="form-label">External Length (inches)</label><input type="number" value="48" id="size-b-1" class="form-control"></div>
@@ -107,25 +202,99 @@
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p_o_2" aria-expanded="false" aria-controls="p_o_2">
                         Pallet
                       </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="p_o_2" class="accordion-collapse collapse" data-bs-parent="#pallet-only-accordion">
                       <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="config-pallet">
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:blockPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_1.png" alt="Pallet 1">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Block Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:customPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_2.png" alt="Pallet 2">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Custom Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:ecoPalletR">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_3.png" alt="Pallet 3">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Eco PalletR</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:hdPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_4.png" alt="Pallet 4">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">HD Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:hdLitePallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_5.png" alt="Pallet 5">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">HD Lite Pallet</div>
+                          </div>
+                          <div class="pallet-item pallet-event-a gap-3 mb-3" id="pallet-b:sledPallet">
+                            <div class="pallet-image">
+                              <img class="img-fluid " src="/Pallet/pallet_6.png" alt="Pallet 6">
+                            </div>
+                            <div class="pallet-btn btn btn-primary">Sled Pallet</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p_o_3" aria-expanded="false" aria-controls="p_o_3">
                         Pallet Editor
                       </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="p_o_3" class="accordion-collapse collapse" data-bs-parent="#pallet-only-accordion">
                       <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="config-editor">
+                          <div class="editor-item mb-3">
+                            <label for="editor-b-1" class="form-label"># of Top Boards</label>
+                            <div class="editor-control">
+                              <i id="minus-b-1" class="bi bi-dash-circle"></i>
+                              <input type="number" value="7" id="editor-b-1" class="form-control">
+                              <i id="plus-b-1" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="editor-item mb-3">
+                            <label for="editor-b-2" class="form-label"># of Stringers</label>
+                            <div class="editor-control">
+                              <i id="minus-b-2" class="bi bi-dash-circle"></i>
+                              <input type="number" value="3" id="editor-b-2" class="form-control">
+                              <i id="plus-b-2" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="editor-item mb-3">
+                            <label for="editor-b-3" class="form-label"># of Bot Boards</label>
+                            <div class="editor-control">
+                              <i id="minus-b-3" class="bi bi-dash-circle"></i>
+                              <input type="number" value="4" id="editor-b-3" class="form-control">
+                              <i id="plus-b-3" class="bi bi-plus-circle"></i>
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="extra_button-b">
+                            <label class="form-check-label" for="extra_button-b">
+                              Extra Bottom lx6
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="rotate_entity-b">
+                            <label class="form-check-label" for="rotate_entity-b">
+                              Rotate Entry
+                            </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

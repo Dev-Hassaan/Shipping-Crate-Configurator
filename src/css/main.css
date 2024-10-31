@@ -1,6 +1,13 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .main-container {
     position: relative;
 }
@@ -21,7 +28,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        height: 120px;
+        height: 90px;
         button {
             width: 180px;
             height: 30px;
@@ -43,6 +50,73 @@
         height: fit-content;
         max-height: 420px;
         overflow-y: auto;
+        & .nav-tabs {
+            button {
+                width: 50%;
+                font-size: 1.2rem;
+                padding: 6px 0;
+                margin: 6px 0;
+            }
+        }
+    }
+}
+
+.config-size {
+    & .size-item {
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input { width: 100px; height: 49px; font-size: 2rem; text-align: center; }
+    }
+}
+
+.config-editor {
+    & .editor-item {
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input { width: 100px; height: 49px; font-size: 2rem; text-align: center; }
+    }
+    & .editor-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+.config-pallet {
+    & .pallet-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .pallet-image {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & .pallet-btn {
+            width: 100%;
+        }
+    }
+}
+
+.config-custom-logo {
+    & .logo-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn { width: 75%; }
     }
 }
 
